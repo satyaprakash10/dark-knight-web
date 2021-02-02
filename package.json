@@ -1,0 +1,35 @@
+{
+  "name": "fashion-blog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.3",
+    "autoprefixer": "^9.8.6",
+    "core-js": "^3.6.5",
+    "flickity": "^2.2.1",
+    "gsap": "^3.5.1",
+    "nuxt": "^2.14.6",
+    "nuxt-fontawesome": "^0.4.0",
+    "nuxt-validate": "^1.0.1",
+    "postcss": "^7.0.35",
+    "swiper": "^6.3.5",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-flickity": "^1.2.1",
+    "vue-hero": "0.0.5",
+    "vuelidate": "^0.7.6"
+  },
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@nuxtjs/fontawesome": "^1.1.2",
+    "@nuxtjs/google-fonts": "^1.2.0",
+    "@nuxtjs/tailwindcss": "^3.2.0"
+  }
+}
