@@ -1,13 +1,29 @@
 <template>
   <div class="main">
     <div
-      class="container section-title px-10 md:mt-0 mt-10 w-auto py-5 items-center"
+      class="container items-center w-auto px-10 py-5 mt-10 section-title md:mt-0"
     >
-      <!-- <h1 class="title mb-10 text-left mt-10 text-white">Dark Knight</h1> -->
+      <!-- <h1 class="mt-10 mb-10 text-left text-white title">Dark Knight</h1> -->
 
-      <h2 class="text-xl">
+      <h2
+        class="text-xl"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-duration="1000"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        data-aos-delay="0"
+      >
         Passionate
-        <span class="text-2xl mb-0 sm:mb-5">
+        <span
+          class="mb-0 text-2xl sm:mb-5"
+          data-aos="fade-up"
+          data-aos-offset="300"
+          data-aos-duration="1000"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-delay="0"
+        >
           Fashion Blogger
         </span>
         from India
@@ -15,12 +31,18 @@
     </div>
 
     <div class="container flex items-center mt-20">
-      <div class="grid grid-cols-1 md:grid-cols-2 px-10 gap-20">
-        <div class="image pl-0" data-aos="fade-right" data-aos-delay="150">
+      <div class="grid grid-cols-1 gap-20 px-10 md:grid-cols-2">
+        <div class="pl-0 image">
           <img
             src="../assets/images/svg/undraw_in_no_time_6igu.svg"
             alt=""
-            class="img-fluid mt-20 px-2 flex w-80 digital"
+            data-aos="zoom-in-right"
+            data-aos-offset="300"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="true"
+            data-aos-delay="0"
+            class="flex px-2 mt-20 img-fluid w-80 digital"
           />
         </div>
 
@@ -30,9 +52,27 @@
           data-aos-delay="300"
         >
           <div class="row">
-            <h1 class="text-left hover:text-black">Blog Portfolio</h1>
+            <h1
+              class="text-left hover:text-black"
+              data-aos="zoom-in-up"
+              data-aos-offset="300"
+              data-aos-duration="1000"
+              data-aos-mirror="true"
+              data-aos-once="true"
+              data-aos-delay="0"
+            >
+              Blog Portfolio
+            </h1>
             <hr class="mt-3" />
-            <p class="text-gray-400 text-left text-xl mt-10">
+            <p
+              class="mt-10 text-xl text-left text-gray-400"
+              data-aos="zoom-in-down"
+              data-aos-offset="300"
+              data-aos-duration="1000"
+              data-aos-mirror="true"
+              data-aos-once="true"
+              data-aos-delay="0"
+            >
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Similique, reiciendis hic quidem et optio molestiae animi adipisci
               iste facere distinctio! Earum rerum enim sunt quibusdam
@@ -40,7 +80,7 @@
             </p>
             <hr class="mt-4 text-white" />
 
-            <div class="read-more button--white-custom mt-10">
+            <div class="mt-10 read-more button--white-custom">
               <a href="#" class="flex items-center">
                 Read More
                 <font-awesome-icon
@@ -57,18 +97,30 @@
     </div>
 
     <div class="container mt-40">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
-        <div
-          class="px-10 py-2 mt-24 content-2 mb-20"
-          data-aos="fade-left"
-          data-aos-delay="300"
-        >
+      <div class="grid grid-cols-1 gap-20 md:grid-cols-2">
+        <div class="px-10 py-2 mt-24 mb-20 content-2">
           <div class="row">
-            <h1 class="text-left hover:text-black">
+            <h1
+              class="text-left hover:text-black"
+              data-aos="zoom-in"
+              data-aos-offset="300"
+              data-aos-duration="1000"
+              data-aos-mirror="true"
+              data-aos-once="true"
+              data-aos-delay="0"
+            >
               Fashion Blog
             </h1>
             <hr class="mt-3" />
-            <p class="text-gray-400 text-left text-xl mt-10">
+            <p
+              class="mt-10 text-xl text-left text-gray-400"
+              data-aos="zoom-in-up"
+              data-aos-offset="300"
+              data-aos-duration="1000"
+              data-aos-mirror="true"
+              data-aos-once="true"
+              data-aos-delay="0"
+            >
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Similique, reiciendis hic quidem et optio molestiae animi adipisci
               iste facere distinctio! Earum rerum enim sunt quibusdam
@@ -76,7 +128,7 @@
             </p>
             <hr class="mt-4 text-white" />
 
-            <div class="read-more button--white-custom mt-10">
+            <div class="mt-10 read-more button--white-custom">
               <a href="#" class="flex items-center">
                 Read More
                 <font-awesome-icon
@@ -90,11 +142,19 @@
           </div>
         </div>
 
-        <div class="image" data-aos="fade-right" data-aos-delay="150">
+        <div
+          class="image"
+          data-aos="zoom-in"
+          data-aos-offset="300"
+          data-aos-duration="1000"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-delay="0"
+        >
           <img
             src="../assets/images/svg/fashion.svg"
             alt=""
-            class="img-fluid sm:px-2 flex md:px-40 hover:text-blue-700 fashion"
+            class="flex img-fluid sm:px-2 md:px-40 hover:text-blue-700 fashion"
           />
         </div>
       </div>
@@ -105,18 +165,18 @@
 <script>
 // import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 // import "swiper/css/swiper.css";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 export default {
   data() {
     return {
-      gsap: ""
+      // gsap: ""
     };
   },
   mounted: function() {
-    gsap.to(".circle", { x: 600, duration: 3 });
-    gsap.to(".circle2", { x: 600, duration: 3 });
-    gsap.to(".fashion", { x: -110, duration: 3 });
-    gsap.to(".digital", { x: 110, duration: 3 });
+    // gsap.to(".circle", { x: 600, duration: 3 });
+    // gsap.to(".circle2", { x: 600, duration: 3 });
+    // gsap.to(".fashion", { x: -110, duration: 3 });
+    // gsap.to(".digital", { x: 110, duration: 3 });
   }
 };
 </script>
@@ -184,17 +244,17 @@ export default {
 }
 
 .img-fluid:hover {
-  opacity: 0.7;
-  transition: all 1.4s;
+  /* opacity: 0.7; */
+  /* transition: all 1.4s; */
   /* border-bottom: 1px solid rgb(234 222 222); */
-  transform: translateX(13px);
+  /* transform: translateX(13px); */
 }
 
 .img-fluid::after:hover {
-  opacity: 0.7;
+  /* opacity: 0.7;
   transition: all 0.7s;
   box-shadow: 7px 1px 30px;
-  transform: translateX(13px);
+  transform: translateX(13px); */
 }
 
 .main {

@@ -1,11 +1,27 @@
 <template>
   <div>
-    <section class="main-content ">
+    <section class="main-content">
       <!-- Ctn-section -->
-      <div class="container-fluid cta" data-aos="zoom-in">
+      <div class="container-fluid cta">
         <div class="text-center">
-          <h3 class="mt-5 text-4xl">Welcome to the World of Fashion & Blog.</h3>
-          <p class="mt-3 text-md">
+          <h3
+            class="mt-5 text-4xl"
+            data-aos="zoom-in"
+            data-aos-delay="0"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="true"
+          >
+            Welcome to the World of Fashion & Blog.
+          </h3>
+          <p
+            class="mt-3 text-md"
+            data-aos="zoom-in-up"
+            data-aos-delay="0"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="true"
+          >
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt mollit
@@ -47,7 +63,10 @@
           <div
             class="mt-4 col-lg-4 col-md-6 d-flex align-items-stretch mt-md-0"
             data-aos="zoom-in"
-            data-aos-delay="200"
+            data-aos-delay="0"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="true"
           >
             <div class="icon-box">
               <div class="icon">
@@ -67,8 +86,6 @@
 
           <div
             class="mt-4 col-lg-4 col-md-6 d-flex align-items-stretch mt-lg-0"
-            data-aos="zoom-in"
-            data-aos-delay="300"
           >
             <div class="icon-box">
               <div class="icon">
@@ -137,7 +154,7 @@
               <div class="icon">
                 <font-awesome-icon
                   icon="cog"
-                  class="text-white  hover:text-green-600 font-awesome-icon"
+                  class="text-white hover:text-green-600 font-awesome-icon"
                   style="font-size: 30px"
                 />
               </div>
@@ -155,14 +172,22 @@
       <section class="mt-20 mb-40" data-aos="zoom-in">
         <div class="container">
           <div class="section-title">
-            <h2>Testimonials</h2>
+            <h2
+              data-aos="zoom-in-up"
+              data-aos-delay="0"
+              data-aos-duration="1000"
+              data-aos-mirror="true"
+              data-aos-once="true"
+            >
+              Testimonials
+            </h2>
           </div>
 
           <!-- <div class="testimonials" data-aos="zoom-in">
               <div class="testimonial-item">
                 <p>
                   <i
-                    class="bx bxs-quote-alt-left quote-icon-left text-white"
+                    class="text-white bx bxs-quote-alt-left quote-icon-left"
                   ></i>
                   Proin iaculis purus consequat sem cure digni ssim donec
                   porttitora entum suscipit rhoncus. Accusantium quam, ultricies
@@ -182,7 +207,7 @@
               <div class="testimonial-item">
                 <p>
                   <i
-                    class="bx bxs-quote-alt-left quote-icon-left text-white"
+                    class="text-white bx bxs-quote-alt-left quote-icon-left"
                   ></i>
                   Export tempor illum tamen malis malis eram quae irure esse
                   labore quem cillum quid cillum eram malis quorum velit fore
@@ -202,7 +227,7 @@
               <div class="testimonial-item">
                 <p>
                   <i
-                    class="bx bxs-quote-alt-left quote-icon-left text-white"
+                    class="text-white bx bxs-quote-alt-left quote-icon-left"
                   ></i>
                   Enim nisi quem export duis labore cillum quae magna enim sint
                   quorum nulla quem veniam duis minim tempor labore quem eram
@@ -221,7 +246,7 @@
               <div class="testimonial-item">
                 <p>
                   <i
-                    class="bx bxs-quote-alt-left quote-icon-left text-white"
+                    class="text-white bx bxs-quote-alt-left quote-icon-left"
                   ></i>
                   Fugiat enim eram quae cillum dolore dolor amet nulla culpa
                   multos export minim fugiat minim velit minim dolor enim duis
@@ -240,7 +265,7 @@
 
               <div class="testimonial-item">
                 <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left text-white">
+                  <i class="text-white bx bxs-quote-alt-left quote-icon-left">
                   </i>
                   Quis quorum aliqua sint quem legam fore sunt eram irure aliqua
                   veniam tempor noster veniam enim culpa labore duis sunt culpa
@@ -261,7 +286,15 @@
           <no-ssr>
             <flickity>
               <div class="px-2">
-                <div class="max-w-5xl px-4 py-5 mx-auto sm:p-6 carousel-cell">
+                <div
+                  class="max-w-5xl px-4 py-5 mx-auto sm:p-6 carousel-cell"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                  data-aos-duration="1000"
+                  data-aos-mirror="true"
+                  data-aos-once="true"
+                  data-aos-offset="300"
+                >
                   <p
                     class="ml-0 -mt-6 text-base font-medium text-center text-gray-600 md:-mt-10 md:text-lg md:ml-6"
                   >
@@ -400,7 +433,7 @@
 export default {
   data() {
     return {};
-  }
+  },
 };
 </script>
 

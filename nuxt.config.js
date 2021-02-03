@@ -28,18 +28,22 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
 
-  plugins: [{ src: "~/plugins/vue-flickity.js", ssr: false }],
+  // plugins: [
+  //   { src: "~/plugins/bootstrap.js", ssr: false }
+  // ],
 
-  ssr: true,
+  // ssr: true,
 
   loading: { color: "#fff" },
 
   script: [],
 
   plugins: [
-    // { src: `~/plugins/bootstrap.js`, mode: `client` },
-    // "~plugins/validate.js",
+    { src: `~/plugins/bootstrap.js`, mode: `client` },
+    { src: "~/plugins/vue-flickity.js", ssr: false },
+    { src: "~plugins/validate.js", ssr: false }
   ],
+  ssr: true,
 
   preset: {
     // Change the postcss-preset-env settings
