@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.3",
+    "@vue-hero-icons/outline": "^1.6.3",
+    "@vue-hero-icons/solid": "^1.6.3",
     "aos": "^3.0.0-beta.6",
     "autoprefixer": "^9.8.6",
     "core-js": "^3.6.5",
@@ -19,11 +21,14 @@
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-validate": "^1.0.1",
     "postcss": "^7.0.35",
+    "sweetalert2": "^10.14.0",
     "swiper": "^6.3.5",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
     "vue-awesome-swiper": "^4.1.1",
     "vue-flickity": "^1.2.1",
+    "vue-gallery": "^2.0.1",
     "vue-hero": "0.0.5",
+    "vue-sweetalert2": "^4.2.0",
     "vuelidate": "^0.7.6"
   },
   "devDependencies": {

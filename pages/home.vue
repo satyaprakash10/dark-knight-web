@@ -2,53 +2,71 @@
   <div>
     <section class="main-content">
       <!-- Ctn-section -->
-      <div class="container-fluid cta">
-        <div class="text-center">
-          <h3
-            class="mt-5 text-4xl"
-            data-aos="zoom-in"
-            data-aos-delay="0"
-            data-aos-duration="1000"
-            data-aos-mirror="true"
-            data-aos-once="true"
+
+      <div class="bg-gray-50 cta">
+        <div
+          data-aos="zoom-in-up"
+          data-aos-delay="0"
+          data-aos-duration="1000"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between"
+        >
+          <h2
+            class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
           >
-            Welcome to the World of Fashion & Blog.
-          </h3>
-          <p
-            class="mt-3 text-md"
+            <span class="block mb-6 text-white">Ready to dive in?</span>
+            <span class="block text-indigo-600">
+              Welcome to the World of Fashion & Blog. .</span
+            >
+          </h2>
+          <div
+            class="flex mt-8 lg:mt-0 lg:flex-shrink-0"
             data-aos="zoom-in-up"
             data-aos-delay="0"
             data-aos-duration="1000"
             data-aos-mirror="true"
             data-aos-once="true"
           >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
-          <a class="mt-10 button--white" href="#">Explore New Style</a>
+            <div class="inline-flex rounded-md shadow">
+              <a
+                href="#"
+                @click="showHelloWorld"
+                style="text-decoration:none;"
+                class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white transition-all duration-500 bg-transparent border border-transparent rounded-md hover:bg-black hover:opacity-75"
+              >
+                Start Demo
+              </a>
+            </div>
+            <div class="inline-flex ml-3 rounded-md shadow">
+              <a
+                style="text-decoration:none;"
+                href="#"
+                class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-indigo-600 bg-white border border-transparent rounded-md hover:bg-indigo-50"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- servies -->
-      <div class="container services" data-aos="fade-up">
-        <!-- <div class="section-title">
-        <h2>Services</h2>
-        <p>Check our Services</p>
-      </div> -->
-
-        <div class="mt-20 row">
-          <div
-            class="col-lg-4 col-md-6 d-flex align-items-stretch"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          >
+      <div
+        class="container mb-20 services"
+        data-aos="zoom-in"
+        data-aos-delay="0"
+        data-aos-duration="1000"
+        data-aos-mirror="true"
+        data-aos-once="true"
+      >
+        <div class="mt-20 row group">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon">
                 <font-awesome-icon
                   icon="calendar"
-                  class="text-white hover:text-green-600"
+                  class="text-white group-hover:text-black"
                   style="font-size: 30px"
                 />
               </div>
@@ -62,17 +80,12 @@
 
           <div
             class="mt-4 col-lg-4 col-md-6 d-flex align-items-stretch mt-md-0"
-            data-aos="zoom-in"
-            data-aos-delay="0"
-            data-aos-duration="1000"
-            data-aos-mirror="true"
-            data-aos-once="true"
           >
             <div class="icon-box">
               <div class="icon">
                 <font-awesome-icon
                   icon="dollar-sign"
-                  class="text-white hover:text-green-600"
+                  class="text-white hover:text-black"
                   style="font-size: 30px"
                 />
               </div>
@@ -91,7 +104,7 @@
               <div class="icon">
                 <font-awesome-icon
                   icon="adjust"
-                  class="text-white hover:text-green-600"
+                  class="text-white hover:text-black"
                   style="font-size: 30px"
                 />
               </div>
@@ -103,16 +116,12 @@
             </div>
           </div>
 
-          <div
-            class="mt-4 col-lg-4 col-md-6 d-flex align-items-stretch"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          >
+          <div class="mt-4 col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon">
                 <font-awesome-icon
                   icon="circle"
-                  class="text-white hover:text-green-600"
+                  class="text-white hover:text-black"
                   style="font-size: 30px"
                 />
               </div>
@@ -124,16 +133,12 @@
             </div>
           </div>
 
-          <div
-            class="mt-4 col-lg-4 col-md-6 d-flex align-items-stretch"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
+          <div class="mt-4 col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon">
                 <font-awesome-icon
                   icon="check"
-                  class="text-white hover:text-green-600"
+                  class="text-white hover:text-black"
                   style="font-size: 30px"
                 />
               </div>
@@ -145,16 +150,12 @@
             </div>
           </div>
 
-          <div
-            class="mt-4 col-lg-4 col-md-6 d-flex align-items-stretch"
-            data-aos="zoom-in"
-            data-aos-delay="300"
-          >
+          <div class="mt-4 col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon">
                 <font-awesome-icon
                   icon="cog"
-                  class="text-white hover:text-green-600 font-awesome-icon"
+                  class="text-white hover:text-black font-awesome-icon"
                   style="font-size: 30px"
                 />
               </div>
@@ -167,277 +168,27 @@
           </div>
         </div>
       </div>
-
-      <!-- Testimonials section -->
-      <section class="mt-20 mb-40" data-aos="zoom-in">
-        <div class="container">
-          <div class="section-title">
-            <h2
-              data-aos="zoom-in-up"
-              data-aos-delay="0"
-              data-aos-duration="1000"
-              data-aos-mirror="true"
-              data-aos-once="true"
-            >
-              Testimonials
-            </h2>
-          </div>
-
-          <!-- <div class="testimonials" data-aos="zoom-in">
-              <div class="testimonial-item">
-                <p>
-                  <i
-                    class="text-white bx bxs-quote-alt-left quote-icon-left"
-                  ></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec
-                  porttitora entum suscipit rhoncus. Accusantium quam, ultricies
-                  eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                  semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img
-                  src="../assets/images/blogger/bluman.jpg"
-                  class="testimonial-img"
-                  alt=""
-                />
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-
-              <div class="testimonial-item">
-                <p>
-                  <i
-                    class="text-white bx bxs-quote-alt-left quote-icon-left"
-                  ></i>
-                  Export tempor illum tamen malis malis eram quae irure esse
-                  labore quem cillum quid cillum eram malis quorum velit fore
-                  eram velit sunt aliqua noster fugiat irure amet legam anim
-                  culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img
-                  src="../assets/images/blogger/bluman.jpg"
-                  class="testimonial-img"
-                  alt=""
-                />
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-
-              <div class="testimonial-item">
-                <p>
-                  <i
-                    class="text-white bx bxs-quote-alt-left quote-icon-left"
-                  ></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint
-                  quorum nulla quem veniam duis minim tempor labore quem eram
-                  duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img
-                  src="../assets/images/blogger/bluman.jpg"
-                  class="testimonial-img"
-                  alt=""
-                />
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-
-              <div class="testimonial-item">
-                <p>
-                  <i
-                    class="text-white bx bxs-quote-alt-left quote-icon-left"
-                  ></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa
-                  multos export minim fugiat minim velit minim dolor enim duis
-                  veniam ipsum anim magna sunt elit fore quem dolore labore
-                  illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img
-                  src="../assets/images/blogger/bluman.jpg"
-                  class="testimonial-img"
-                  alt=""
-                />
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-
-              <div class="testimonial-item">
-                <p>
-                  <i class="text-white bx bxs-quote-alt-left quote-icon-left">
-                  </i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua
-                  veniam tempor noster veniam enim culpa labore duis sunt culpa
-                  nulla illum cillum fugiat legam esse veniam culpa fore nisi
-                  cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img
-                  src="../assets/images/blogger/bluman.jpg"
-                  class="testimonial-img"
-                  alt=""
-                />
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div> -->
-
-          <no-ssr>
-            <flickity>
-              <div class="px-2">
-                <div
-                  class="max-w-5xl px-4 py-5 mx-auto sm:p-6 carousel-cell"
-                  data-aos="zoom-in"
-                  data-aos-delay="0"
-                  data-aos-duration="1000"
-                  data-aos-mirror="true"
-                  data-aos-once="true"
-                  data-aos-offset="300"
-                >
-                  <p
-                    class="ml-0 -mt-6 text-base font-medium text-center text-gray-600 md:-mt-10 md:text-lg md:ml-6"
-                  >
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </div>
-
-                <!-- Divider -->
-                <div class="flex justify-center mt-2">
-                  <span class="w-1/4 border-b-2 border-gray-200" />
-                </div>
-
-                <!-- Profile -->
-                <div class="flex justify-center mx-auto mt-1 max-w-7xl">
-                  <div class="px-4 py-5 mb-4 sm:p-6">
-                    <img
-                      src="~assets/images/user-profile.svg"
-                      class="ml-8 text-center rounded-full shadow cursor-pointer w-14 hover:shadow-2xl"
-                      alt=""
-                    />
-                    <div>
-                      <h4 class="mt-2 text-sm font-semibold text-center">
-                        Ruben White
-                      </h4>
-                      <span class="text-center">
-                        CEO,
-                        <a
-                          href="#"
-                          class="text-xs text-yellow-500 transition-all duration-700 cursor-pointer hover:text-blue-600"
-                          >Example.com</a
-                        >
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-full px-2">
-                <div class="max-w-5xl px-4 py-5 mx-auto sm:p-6 carousel-cell">
-                  <p
-                    class="ml-0 -mt-6 text-base font-medium text-center text-gray-600 md:-mt-10 md:text-base md:ml-7"
-                  >
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </div>
-
-                <!-- Divider -->
-                <div class="flex justify-center mt-2">
-                  <span class="w-1/4 border-b-2 border-gray-200" />
-                </div>
-
-                <!-- Profile -->
-                <div class="flex justify-center mx-auto mt-1 mb-6 max-w-7xl">
-                  <div class="px-4 py-5 mb-4 sm:p-6">
-                    <img
-                      src="~assets/images/user-profile.svg"
-                      class="ml-8 text-center rounded-full shadow cursor-pointer w-14 hover:shadow-2xl"
-                      alt=""
-                    />
-                    <div>
-                      <h4 class="mt-2 text-sm font-semibold text-center">
-                        Ruben White
-                      </h4>
-                      <span class="text-center">
-                        CEO,
-                        <a
-                          href="#"
-                          class="text-xs text-yellow-500 transition-all duration-700 cursor-pointer hover:text-blue-600"
-                          >Example.com</a
-                        >
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-full px-2">
-                <div class="max-w-5xl px-4 py-5 mx-auto sm:p-6 carousel-cell">
-                  <p
-                    class="ml-0 -mt-6 text-base font-medium text-center text-gray-600 md:-mt-10 md:text-base md:ml-7"
-                  >
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </div>
-
-                <!-- Divider -->
-                <div class="flex justify-center mt-2">
-                  <span class="w-1/4 border-b-2 border-gray-200" />
-                </div>
-
-                <!-- Profile -->
-                <div class="flex justify-center mx-auto mt-1 mb-6 max-w-7xl">
-                  <div class="px-4 py-5 mb-4 sm:p-6">
-                    <img
-                      src="~assets/images/user-profile.svg"
-                      class="ml-8 text-center rounded-full shadow cursor-pointer w-14 hover:shadow-2xl"
-                      alt=""
-                    />
-                    <div>
-                      <h4 class="mt-2 text-sm font-semibold text-center">
-                        Ruben White
-                      </h4>
-                      <span class="text-center">
-                        CEO,
-                        <a
-                          href="#"
-                          class="text-xs text-yellow-500 transition-all duration-700 cursor-pointer hover:text-blue-600"
-                          >Example.com
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </flickity>
-          </no-ssr>
-        </div>
-      </section>
     </section>
   </div>
 </template>
 
 <script>
+import Swal from "sweetalert2";
 export default {
   data() {
     return {};
   },
+  methods: {
+    showHelloWorld() {
+      Swal.fire("Good job!", "You clicked the button!", "success");
+      // Use sweetalert2
+      // this.$swal("Hello Vue world!!!");
+    }
+  }
 };
 </script>
 
-<style scoped>
+<style>
 .flickity-button {
   display: none;
 }
@@ -499,7 +250,7 @@ a {
   border: 1px solid #ebebeb;
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
-  background: #fff;
+  background: transparent;
   box-shadow: (1px 10px 12px 0) white;
 }
 
@@ -563,8 +314,8 @@ a {
 }
 
 .services .icon-box:hover {
-  background: #18d26e;
-  border-color: #18d26e;
+  background: white;
+  border-color: blue;
 }
 
 .services .icon-box:hover .icon {
@@ -572,11 +323,11 @@ a {
 }
 
 .services .icon-box:hover .icon i {
-  color: #18d26e;
+  color: black;
 }
 
 .services .icon-box:hover .icon::before {
-  background: #35e888;
+  background: black;
 }
 
 /* bloger-slider */
@@ -691,7 +442,7 @@ button {
 }
 
 .testimonials .owl-dot.active {
-  background-color: #18d26e !important;
+  background-color: black !important;
 }
 
 @media (max-width: 767px) {

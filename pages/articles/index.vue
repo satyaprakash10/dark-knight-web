@@ -1,650 +1,158 @@
 <template>
-  <section class="bg-black">
-    <h1 class="text-center text-white text-3xl mt-20 mb-5">
-      Check it out all new Portfolio.
-    </h1>
-    <!-- <div
-     class="container px-40 mt-20 example-3d" data-aos="zoom-in">
-      <swiper class="swiper" :options="swiperOption">
-        <swiper-slide class="">
-          <img
-            src="../../assets/images/client/client-1.png"
-            class="clients clients-dots"
-            width="250px"
-            alt=""
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="../../assets/images/client/client-2.png"
-            class="clients clients-dots"
-            width="250px"
-            alt=""
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="../../assets/images/client/client-3.png"
-            class="clients clients-dots"
-            width="250px"
-            alt=""
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="../../assets/images/client/client-4.png"
-            class="clients clients-dots"
-            width="250px"
-            alt=""
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="../../assets/images/client/client-5.png"
-            class="clients clients-dots"
-            width="250px"
-            alt=""
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="../../assets/images/client/client-6.png"
-            class="clients clients-dots"
-            width="250px"
-            alt=""
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="../../assets/images/client/client-7.png"
-            class="clients clients-dots"
-            width="250px"
-            alt=""
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="../../assets/images/client/client-8.png"
-            class="clients clients-dots"
-            width="250px"
-            alt=""
-          />
-        </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-      </swiper>
-    </div> -->
-
-    <!-- Portfolio -->
-    <div class="portfolio">
-      <div class="container">
-        <div class="section-title text-center ">
-          <h2>Portfolio</h2>
-          <p class="text-white">My Works</p>
-        </div>
-
+  <div class="mt-24">
+    <gallery :images="images" :index="index" @close="index = null"></gallery>
+    <div
+      class="grid gap-10 mb-20 overflow-hidden md:px-16 grid:cols-1 md:grid-cols-3 group"
+    >
+      <div
+        class="relative overflow-hidden transition-all duration-1000 transform bg-transparent rounded-md shadow-lg image hover:bg-emerald-100 hover:opacity-75 hover:rounded-md"
+        v-for="(image, imageIndex) in images"
+        :key="imageIndex"
+        @click="index = imageIndex"
+        :style="{
+          backgroundImage: 'url(' + image + ')',
+          width: '400px',
+          height: '400px'
+        }"
+      >
         <div
-          class="row portfolio-container px-20 py-10 mb-10 rounded-lg shadow shadow-lg"
-          style="background-color: rgb(16 15 15);"
+          class="absolute z-10 w-full h-full transition duration-700 ease-in-out transform opacity-0 hover:opacity-100 hover:bg-opacity-50 hover:bg-gray-200 hover:scale-110"
         >
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="../../assets/images/car.png" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a
-                    src="../../assets/images/car.png"
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="App 1"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a href="portfolio-details.html" title="More Details"
-                    ><font-awesome-icon
-                      icon="link"
-                      class="text-white"
-                      style="font-size: 30px"
-                  /></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="absolute top-0 bottom-0 left-0 right-0">
+            <div
+              class="flex items-center justify-center w-full h-full space-x-3"
+            >
+              <span
+                class="flex items-center justify-center w-8 h-8 transition duration-500 bg-gray-900 rounded-full cursor-pointer hover:bg-blue-500"
+              >
+                <trash-icon class="right-0 justify-center w-5 h-5 text-white" />
+              </span>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="../../assets/images/car.png" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a
-                    src="../../assets/images/car.png"
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="Web 3"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a href="portfolio-details.html" title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="../../assets/images/car.png" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a
-                    src="../../assets/images/car.png"
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="App 2"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a href="portfolio-info" title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="../../assets/images/car.png" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a
-                    src="../../assets/images/car.png"
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="Card 2"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a href="portfolio-info" title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="../../assets/images/car.png" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a
-                    src="../../assets/images/car.png"
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="Web 2"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a href="portfolio-info" title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="../../assets/images/car.png" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a
-                    src="../../assets/images/car.png"
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="App 3"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a href="portfolio-info" title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="../../assets/images/car.png" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a
-                    src="../../assets/images/car.png"
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="Card 1"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a href="portfolio-details.html" title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="../../assets/images/car.png" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a
-                    src="../../assets/images/car.png"
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="Card 3"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a href="portfolio-details.html" title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="../../assets/images/car.png" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a
-                    src="../../assets/images/car.png"
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="Web 3"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a href="portfolio-details.html" title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="../../assets/images/car.png" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a
-                    src="../../assets/images/img1.jpg"
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="Card 3"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a href="portfolio-details.html" title="More Details">
-                    <font-awesome-icon
-                      icon="link"
-                      class="text-white"
-                      style="font-size: 30px"
-                  /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img
-                src="../../assets/images/cta-bg.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a
-                    src="../../assets/images/about.jpg"
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="Web 3"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a
-                    src="../../assets/images/car.png"
-                    data-gall="portfolioDetailsGallery"
-                    data-vbtype="iframe"
-                    class="venobox"
-                    title="Portfolio Details"
-                    ><font-awesome-icon
-                      icon="link"
-                      class="text-white"
-                      style="font-size: 30px"
-                  /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img
-                src="../../assets/images/testimonials-bg.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a
-                    src="../../assets/images/about.jpg"
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="Web 3"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a
-                    src="../../assets/images/car.png"
-                    data-gall="portfolioDetailsGallery"
-                    data-vbtype="iframe"
-                    class="venobox"
-                    title="Portfolio Details"
-                    ><font-awesome-icon
-                      icon="link"
-                      class="text-white"
-                      style="font-size: 30px"
-                    />
-                  </a>
-                </div>
-              </div>
+              <span
+                class="flex items-center justify-center w-8 h-8 transition duration-500 bg-gray-900 rounded-full cursor-pointer hover:bg-blue-500"
+              >
+                <zoom-in-icon
+                  class="right-0 justify-center w-5 h-5 text-white"
+                />
+              </span>
             </div>
           </div>
         </div>
       </div>
+      <!-- <div class="text-left">
+        <h6 class="text-lg font-medium text-gray-900 hover:text-blue-500">
+          Derby Lane Estate
+        </h6>
+        <p class="text-sm font-normal text-gray-600">
+          7940, Bunnel Hill road, Springboro, Ohio 45066
+        </p>
+      </div> -->
+      <!-- <template v-slot:footer>
+
+        </template> -->
     </div>
-  </section>
+
+    <div class="px-6 mx-auto mt-24 max-w-7xl">
+      <flickity>
+        <img
+          src="~/assets/images/client/client-1.png"
+          alt=""
+          height="200px"
+          width="200px"
+        />
+        <img
+          src="~/assets/images/client/client-2.png"
+          alt=""
+          height="200px"
+          width="200px"
+        /><img
+          src="~/assets/images/client/client-3.png"
+          alt=""
+          height="200px"
+          width="200px"
+        /><img
+          src="~/assets/images/client/client-4.png"
+          alt=""
+          height="200px"
+          width="200px"
+        /><img
+          src="~/assets/images/client/client-5.png"
+          alt=""
+          height="200px"
+          width="200px"
+        /><img
+          src="~/assets/images/client/client-6.png"
+          alt=""
+          height="200px"
+          width="200px"
+        />
+        <img
+          src="~/assets/images/client/client-7.png"
+          alt=""
+          height="200px"
+          width="200px"
+        />
+        <img
+          src="~/assets/images/client/client-8.png"
+          alt=""
+          height="200px"
+          width="200px"
+        />
+      </flickity>
+    </div>
+  </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import VueGallery from "vue-gallery";
+import { TrashIcon, ZoomInIcon } from "@vue-hero-icons/solid";
+import Img1 from "@/assets/images/venue/venue-img-1.jpg";
+import Img2 from "@/assets/images/venue/venue-img-2.jpg";
+import Img3 from "@/assets/images/venue/venue-img-3.jpg";
+import Img4 from "@/assets/images/venue/venue-img-4.jpg";
+import Img5 from "@/assets/images/venue/venue-img-5.jpg";
+import Img6 from "@/assets/images/venue/venue-img-6.jpg";
 
 export default {
-  name: "swiper-example-centered-slides",
-  title: "Centered slides",
-  components: {
-    Swiper,
-    SwiperSlide
-  },
-  data() {
+  data: function() {
     return {
-      swiperOption: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        centeredSlides: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        }
-      }
+      images: [Img1, Img2, Img3, Img4, Img5, Img6],
+      index: null
     };
   },
 
-  breakpoints: {
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 40
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 20
-    },
-    640: {
-      slidesPerView: 5,
-      spaceBetween: 10
-    },
-    320: {
-      slidesPerView: 4,
-      spaceBetween: 5
+  components: {
+    gallery: VueGallery,
+    TrashIcon,
+    ZoomInIcon
+  },
+
+  methods: {
+    removePicture(image) {
+      if (image) {
+        swal({
+          title: "Are you sure?",
+          text: "You will not be able to recover this photo after its deleted.",
+          confirmButtonText: "Delete",
+          cancelButtonText: "Cancel",
+          icon: "error",
+          iconHtml: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>`,
+          showCancelButton: true
+        });
+      }
     }
   }
 };
 </script>
 
 <style scoped>
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-.swiper-slide {
-  /* width: 60%; */
-}
-.swiper-slide:nth-child(2n) {
-  /* width: 40%; */
-}
-.swiper-slide:nth-child(3n) {
-  /* width: 20%; */
+image {
+  margin-top: 4rem;
 }
 
-.clients {
-  padding-top: 20px;
-}
-
-.clients {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.clients {
-  width: 70%;
-  opacity: 0.5;
-  transition: 0.5s;
-  -webkit-filter: grayscale(100);
-  filter: grayscale(100);
-}
-
-.clients:hover {
-  -webkit-filter: none;
-  /* box-shadow: 2px 0 25px 0 rgba(0, 0, 0, 0.1); */
-  transform: translateY(-10px);
-  cursor: pointer;
-  filter: none;
-  opacity: 1;
-}
-
-.clients,
-.clients-dots {
-  margin-top: 5px;
-  text-align: center;
-}
-
-.clients-dot {
-  display: inline-block;
-  margin: 0 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd !important;
-}
-
-.clients-dot.active {
-  background-color: #ffc451 !important;
-}
-
-/* Portfolio */
-.portfolio .portfolio-item {
-  margin-bottom: 30px;
-}
-
-.portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 15px auto;
-  list-style: none;
-  text-align: center;
-  border-radius: 50px;
-  padding: 2px 15px;
-}
-
-.portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 8px 16px 10px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 0 3px 10px 3px;
-  transition: all 0.3s ease-in-out;
-  border-radius: 4px;
-}
-
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
-  background: #18d26e;
-}
-
-.portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-
-.portfolio .portfolio-wrap {
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.portfolio .portfolio-wrap::before {
-  content: "";
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  top: 30px;
-  bottom: 30px;
-  transition: all ease-in-out 0.3s;
-  z-index: 2;
-  opacity: 0;
-}
-
-.portfolio .portfolio-wrap .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  z-index: 3;
-  transition: all ease-in-out 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.portfolio .portfolio-wrap .portfolio-info::before {
-  display: block;
-  content: "";
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  top: 35px;
-  left: 35px;
-  border-top: 3px solid #fff;
-  border-left: 3px solid #fff;
-  transition: all 0.5s ease 0s;
-  z-index: 9994;
-}
-
-.portfolio .portfolio-wrap .portfolio-info::after {
-  display: block;
-  content: "";
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  bottom: 35px;
-  right: 35px;
-  border-bottom: 3px solid #fff;
-  border-right: 3px solid #fff;
-  transition: all 0.5s ease 0s;
-  z-index: 9994;
-}
-
-.portfolio .portfolio-wrap .portfolio-info h4 {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 600;
-}
-
-.portfolio .portfolio-wrap .portfolio-info p {
-  color: #ffffff;
-  font-size: 14px;
-  text-transform: uppercase;
-  padding: 0;
-  margin: 0;
-}
-
-.portfolio .portfolio-wrap .portfolio-links {
-  text-align: center;
-  z-index: 4;
-}
-
-.portfolio .portfolio-wrap .portfolio-links a {
-  color: #fff;
-  margin: 0 2px;
-  font-size: 28px;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #63eda3;
-}
-
-.portfolio .portfolio-wrap:hover::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-info {
-  opacity: 1;
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-info::before {
-  top: 15px;
-  left: 15px;
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-info::after {
-  bottom: 15px;
-  right: 15px;
+.blueimp-gallery {
+  background: rgba(0, 0, 0, 0.8);
 }
 </style>

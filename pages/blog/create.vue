@@ -1,117 +1,125 @@
 <template>
-  <section class="px-24 theme">
-    <h1
-      class="text-white lg:text-3xl font-medium mb-10 mt-14 text-2xl md:text-2xl"
-    >
-      Create a New Blog
-    </h1>
-    <hr class="mt-3" />
+  <section class="mt-20 mb-20 theme">
+    <div class="px-6 py-5 mx-auto max-w-7xl">
+      <h6
+        class="mb-10 font-sans text-2xl font-semibold text-white lg:text-4xl mt-14 md:text-4xl"
+      >
+        Create a New Blog
+      </h6>
+      <hr class="mt-3 mb-5 bg-white max-3xl" />
 
-    <div
-      class="grid grid-cols-2 mt-2 w-full xl:w-1/3 form-container rounded-lg mb-20"
-    >
-      <div class="col-span-12 md:col-span-8 md:mt-0">
-        <form action="post" @submit.prevent="handleSubmitBlog">
-          <div class="px-10 py-12 ">
-            <div class="mb-5">
-              <label
-                for="firstName"
-                class="mr-10 text-gray-400 text-2xl"
-                place-holder="Enter your First name"
-                >First Name</label
-              >
-              <input
-                type="text"
-                v-model="formData.firstName"
-                class="form-input w-full text-md rounded w-full py-2 px-4 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10 hover:bg-blue-100 focus:border-blue-500"
-              />
-              <div
-                v-if="submitBlog && !$v.formData.firstName.required"
-                class="text-red-500 mt-2"
-              >
-                First Name is required
+      <div
+        class="grid grid-cols-2 gap-6 rounded-lg opacity-75 md:grid-cols-1 xl:w-1/2"
+      >
+        <div
+          class="flex items-center justify-between cols-span-8 md:cols-span-12"
+        >
+          <div class="h-full md:mt-0">
+            <form action="post" @submit.prevent="handleSubmitBlog">
+              <div class="px-10 py-6">
+                <div class="mb-3 text-left">
+                  <label
+                    for="firstName"
+                    class="mr-10 text-2xl text-gray-400"
+                    place-holder="Enter your First name"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    v-model="formData.firstName"
+                    class="w-full h-10 px-4 py-2 leading-tight text-gray-700 bg-gray-100 rounded form-input text-md focus:outline-none focus:shadow-outline hover:bg-blue-100 focus:border-blue-500"
+                  />
+                  <div
+                    v-if="submitBlog && !$v.formData.firstName.required"
+                    class="mt-2 text-red-500"
+                  >
+                    First Name is required
+                  </div>
+                </div>
+
+                <div class="mb-3 text-left">
+                  <label
+                    for="lastName"
+                    class="mr-10 text-2xl text-gray-400"
+                    place-holder="Enter your Last name"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    v-model="formData.lastName"
+                    class="w-full h-10 px-4 py-2 leading-tight text-gray-700 bg-gray-100 rounded form-input text-md focus:outline-none focus:shadow-outline hover:bg-blue-100 focus:border-blue-500"
+                  />
+                  <div
+                    v-if="submitBlog && !$v.formData.firstName.required"
+                    class="mt-2 text-red-500"
+                  >
+                    Last Name is required
+                  </div>
+                </div>
+
+                <div class="mb-3 text-left">
+                  <label
+                    for="email"
+                    class="mr-10 text-2xl text-gray-400"
+                    aria-placeholder="Your Email address"
+                    >Email</label
+                  >
+                  <div
+                    v-if="submitBlog && !$v.formData.firstName.required"
+                    class="mt-2 text-red-500"
+                  >
+                    Email is required
+                  </div>
+
+                  <input
+                    type="text"
+                    v-model="formData.email"
+                    class="w-full h-10 px-4 py-2 leading-tight text-gray-700 bg-gray-100 rounded form-input text-md focus:outline-none focus:shadow-outline hover:bg-blue-100 focus:border-blue-500"
+                  />
+                </div>
+
+                <div class="text-left">
+                  <label
+                    for="blogTitle"
+                    class="mr-10 text-2xl text-gray-400"
+                    placeholder="Blog Name"
+                    >Blog Title</label
+                  >
+                  <input
+                    type="text"
+                    v-model="$v.formData.blogTitle"
+                    class="w-full h-10 px-4 py-2 leading-tight text-gray-700 bg-gray-100 rounded form-input text-md focus:outline-none focus:shadow-outline hover:bg-blue-100 focus:border-blue-500"
+                  />
+
+                  <div
+                    v-if="submitBlog && !$v.formData.blogTitle.required"
+                    class="mt-2 text-red-500"
+                  >
+                    Blog Title is required
+                  </div>
+                </div>
+
+                <hr class="mt-5 border-white border-t-1" />
+
+                <div class="flex pb-3 mt-10 mb-20">
+                  <button
+                    @click="selectOption"
+                    class="px-4 py-2 text-xl text-black uppercase bg-blue-500 rounded-md"
+                  >
+                    Submit
+                  </button>
+                </div>
               </div>
-            </div>
-
-            <div class="mb-5">
-              <label
-                for="lastName"
-                class="mr-10 text-gray-400 text-2xl"
-                place-holder="Enter your Last name"
-                >Last Name</label
-              >
-              <input
-                type="text"
-                v-model="formData.lastName"
-                class="form-input w-full text-md rounded w-full py-2 px-4 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10 hover:bg-blue-100 focus:border-blue-500"
-              />
-              <div
-                v-if="submitBlog && !$v.formData.firstName.required"
-                class="text-red-500 mt-2"
-              >
-                Last Name is required
-              </div>
-            </div>
-
-            <div class="mb-5">
-              <label
-                for="email"
-                class="mr-10 text-gray-400 text-2xl"
-                aria-placeholder="Your Email address"
-                >Email</label
-              >
-              <div
-                v-if="submitBlog && !$v.formData.firstName.required"
-                class="text-red-500 mt-2"
-              >
-                Email is required
-              </div>
-
-              <input
-                type="text"
-                v-model="formData.email"
-                class="form-input w-full text-md rounded py-2 px-4 w-full text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10 hover:bg-blue-100  focus:border-blue-500"
-              />
-            </div>
-
-            <div class="">
-              <label
-                for="blogTitle"
-                class="mr-10 text-gray-400 text-2xl"
-                placeholder="Blog Name"
-                >Blog Title</label
-              >
-              <input
-                type="text"
-                v-model="$v.formData.blogTitle"
-                class="form-input w-full text-md rounded w-full py-2 px-4 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10 hover:bg-blue-100  focus:border-blue-500"
-              />
-
-              <div
-                v-if="submitBlog && !$v.formData.blogTitle.required"
-                class="text-red-500 mt-2"
-              >
-                Blog Title is required
-              </div>
-            </div>
-
-            <hr class="mt-5 border-t-1 border-white" />
-
-            <div class="flex mt-10 pb-3">
-              <button
-                class="uppercase text-xl text-black button--green border-white"
-              >
-                Submit
-              </button>
-            </div>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import Swal from "sweetalert2";
 import Vue from "vue";
 import { validationMixin } from "vuelidate";
 import {
@@ -133,6 +141,7 @@ export default Vue.extend({
         email: "",
         blogTitle: ""
       },
+      fruit: "",
       submitBlog: false
     };
   },
@@ -179,6 +188,42 @@ export default Vue.extend({
           console.log(error);
           alert("SUCCESS!! :-)\n\n" + JSON.stringify(this.user));
         });
+    },
+
+    async selectOption() {
+      const { value: fruit } = await Swal.fire({
+        title: "Select field validation",
+        input: "select",
+        inputOptions: {
+          Fruits: {
+            apples: "Apples",
+            bananas: "Bananas",
+            grapes: "Grapes",
+            oranges: "Oranges"
+          },
+          Vegetables: {
+            potato: "Potato",
+            broccoli: "Broccoli",
+            carrot: "Carrot"
+          },
+          icecream: "Ice cream"
+        },
+        inputPlaceholder: "Select a fruit",
+        showCancelButton: true,
+        inputValidator: value => {
+          return new Promise(resolve => {
+            if (value === "oranges") {
+              resolve();
+            } else {
+              resolve("You need to select oranges :)");
+            }
+          });
+        }
+      });
+
+      if (fruit) {
+        Swal.fire(`You selected: ${fruit}`);
+      }
     }
   }
 });

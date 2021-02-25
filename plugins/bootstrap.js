@@ -1,6 +1,9 @@
+import Vue from "vue";
 import { gsap } from "gsap";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import VueSweetalert2 from "vue-sweetalert2";
+import "sweetalert2/dist/sweetalert2.min.css";
 AOS.init();
 AOS.init({
   // Global settings:
@@ -23,3 +26,4 @@ AOS.init({
   anchorPlacement: "top-bottom" // defines which position of the element regarding to window should trigger the animation
 });
 Vue.use(AOS);
+Vue.use(VueSweetalert2);

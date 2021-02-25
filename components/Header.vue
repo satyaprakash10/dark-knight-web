@@ -3,11 +3,11 @@
     <nav class="flex header px:10 md:px-20 stroke">
       <div class="mr-0 logo md:mr-20 ">
         <h1 class="px-3 md:px-5">
-          <nuxt-link to="/">Dark Knight</nuxt-link>
+          <a href="/">Dark Knight</a>
         </h1>
       </div>
 
-      <ul class="flex gap-5 fill hidden md:block ">
+      <ul class="flex hidden gap-5 fill md:block ">
         <li><nuxt-link to="/home">Home</nuxt-link></li>
         <li><nuxt-link to="/blog">Blog</nuxt-link></li>
         <li><nuxt-link to="/articles/">Portfolio</nuxt-link></li>
@@ -17,7 +17,7 @@
             Contact us
             <!-- <transition name="slide-fade, list">
                 <ul
-                  class="list-reset  octocat-wave w-48 p-4 bg-grey-light collapse-bg"
+                  class="w-48 p-4 list-reset octocat-wave bg-grey-light collapse-bg"
                 >
                   <li>Example!</li>
                   <li>Example!</li>
@@ -30,18 +30,22 @@
           </nuxt-link>
         </li>
       </ul>
-      <div class="flex">
-        <nuxt-link to="/contact">
-          <button class="px-4 octocat-wave py-2 button--green">
-            Get Started
-          </button>
-        </nuxt-link>
+      <div class="flex hidden md:block">
+        <div class="rounded-md shadow group">
+          <a
+            style="text-decoration:none;"
+            href="#"
+            class="items-center w-56 px-8 py-3 text-base font-medium text-black transition duration-700 ease-in-out transform bg-white border border-white rounded-md hover:shadow-xl hover:bg-transparent group-hover:text-black group-hover:opacity-75 md:py-4 md:text-lg md:px-10"
+          >
+            Get started
+          </a>
+        </div>
       </div>
 
       <!-- Mobile-Menu -->
       <button
         @click="toggleSidebar()"
-        class="toggle-btn px-2 py-2 rounded-sm md:hidden block hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-100 "
+        class="block px-2 py-2 rounded-sm toggle-btn md:hidden hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-100 "
       >
         <font-awesome-icon
           icon="bars"
@@ -52,7 +56,7 @@
 
       <transition name="slide-fade, list">
         <ul
-          class="flex gap-5 fill md:hidden block menu-items mobile-menu flex-col"
+          class="flex flex-col block gap-5 fill md:hidden menu-items mobile-menu"
           v-show="isOpenA"
         >
           <li @click="toggleSidebar()">
@@ -73,7 +77,7 @@
 
           <div class="flex justify-center">
             <nuxt-link to="/contact">
-              <button class="px-4 py-2 button--green border border-white">
+              <button class="px-4 py-2 border border-white button--green">
                 Get Started
               </button>
             </nuxt-link>
@@ -169,7 +173,6 @@ export default Vue.extend({
   text-decoration: none;
   /* background: rgb(83, 202, 231); */
   transition: all 2s;
-  margin: 2px 5px;
 }
 
 nav ul {

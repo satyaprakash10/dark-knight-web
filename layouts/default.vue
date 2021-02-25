@@ -1,7 +1,7 @@
 <template>
   <section>
     <Header />
-    <transition name="slide-fade" data-aos-delay="400">
+    <transition>
       <button
         name="slide-fade"
         @click="topFunction()"
@@ -11,14 +11,17 @@
       >
         <font-awesome-icon
           icon="arrow-up"
-          class="hover:text-green-600 text-black"
+          class="text-black hover:text-green-600"
           style="font-size: 30px"
         />
       </button>
     </transition>
 
-    <transition name="slide-fade" class="layout">
-      <div class="main-content" data-aos-delay="300" style="margin-top:7rem;">
+    <transition>
+      <div
+        class="bg-no-repeat bg-contain main-content"
+        style="margin-top:7rem;"
+      >
         <Nuxt />
       </div>
     </transition>
@@ -91,8 +94,7 @@ html {
   height: auto;
   position: relative;
   opacity: 1;
-  background-color: transparent;
-  /* background: url("../assets/images/cta-bg.jpg") top right no-repeat; */
+  /* background-color: transparent; */
 }
 
 .list-item {
@@ -279,7 +281,9 @@ section {
 .main-content {
   transition: all 0.5s;
   height: 100%;
+  width: 100%;
   background: #000;
   min-height: calc(140vh - 80px);
+  /* background: url("../assets/images/dekstop-theme.svg"); */
 }
 </style>

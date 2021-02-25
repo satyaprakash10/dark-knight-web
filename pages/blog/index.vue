@@ -1,23 +1,23 @@
 <template>
-  <section>
-    <div
-      class="container grid mt-10 grid-cols-1 lg:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-10"
-    >
-      <div class="mb-2 mt-10 text-left">
+  <section class="">
+    <div class="px-6 py-4 mx-auto mt-24 max-w-7xl">
+      <div
+        class="grid grid-cols-1 gap-10 mb-2 text-left lg:grid-cols-2 md:grid-cols-1 xl:grid-cols-2"
+      >
         <figure
-          class="md:flex sm:bg-gray-100 rounded-xl p-8 md:p-0"
+          class="p-8 md:flex sm:bg-gray-100 rounded-xl md:p-0"
           style="background-color: #101010;"
         >
           <img
-            class="w-32 h-32 md:w-60 md:h-auto md:rounded-none rounded-full mx-auto"
+            class="w-32 h-32 mx-auto rounded-full md:w-56 md:h-auto md:rounded-none"
             src="../../assets/images/blogger/alex.jpg"
             alt=""
             width="384"
-            height="512"
+            height="300"
           />
-          <div class="pt-6 md:p-8 text-left md:text-left space-y-4">
+          <div class="pt-6 space-y-4 text-left md:p-8 md:text-left">
             <blockquote>
-              <p class="text-lg text-white font-semibold">
+              <p class="text-lg font-medium text-white">
                 “Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Necessitatibus, repellendus mollitia! Illum harum eaque
                 molestiae maiores, error quis unde, est quisquam totam dolorum
@@ -33,7 +33,7 @@
               </div>
             </figcaption>
             <button
-              class="px-4 octocat-wave hover:bg-white border border-bg-white py-2 button--green"
+              class="px-4 py-2 text-black transition duration-700 bg-white rounded-md border-outline-none focus hover:bg-gray-600 "
             >
               Learn more
             </button>
@@ -43,12 +43,12 @@
     </div>
 
     <div class="mt-10 mb:10">
-      <h1 class="text-3xl text-white text-center">
+      <h1 class="text-3xl text-center text-white">
         Check it out all new trending Blog's and Features now.
       </h1>
 
-      <div class="mt-10 text-center mb-10">
-        <a href="#" class="button--green border hover:bg-white border-bg-white">
+      <div class="mt-10 mb-10 text-center">
+        <a href="#" class="border button--green hover:bg-white border-bg-white">
           <nuxt-link to="blog/create">Add New Blog</nuxt-link>
         </a>
       </div>

@@ -58,7 +58,8 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
     "nuxt-fontawesome",
-    "@nuxtjs/google-fonts"
+    "@nuxtjs/google-fonts",
+    "vue-sweetalert2/nuxt"
     // "nuxt-validate"
   ],
 
